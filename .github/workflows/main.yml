@@ -1,11 +1,23 @@
-on:
+
+on:    
+# top-level-key that tells GA when to run this WF
  push:
+ # runs the WF when someone pushes the code to repo
    branches: [ main,'feature/*' ]
+   # Limits the the trigger to pushe on specific branch.Main or matches any branch starting with feature/(eg,feature/login)
    tags: [ 'v*.*.*' ]
+   # Runs when someone pushes Git tag matching the pattern v1.0.0,v2.3.5(for versioned builds)
    paths: [ 'src/**' ]
+   # WF runs only if files under src/ directory change
  pull_request:
+  # runs when PR is opened
   types: [opened, synchronize, reopened]
+  # Restricts when PR events trigger it
  issues:
+ # runs the WF on issue-related events
   types: [opened, closed, reopened]
+ # triggers only wen opened
  workflow_dispatch:
+ # Allows a manual trigger from Github Actions UI
+ 
   
