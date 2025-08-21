@@ -1,0 +1,11 @@
+on:
+ push:
+   branches: [ main,'feature/*' ]
+   tags: [ 'v*.*.*' ]
+   paths: [ 'src/**' ]
+ pull_request:
+  types: [opened, synchronize, reopened]
+ issues:
+  types: [opened, closed, reopened]
+ workflow_dispatch:
+  
