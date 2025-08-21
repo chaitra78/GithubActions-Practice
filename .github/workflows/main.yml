@@ -19,5 +19,12 @@ on:
  # triggers only wen opened
  workflow_dispatch:
  # Allows a manual trigger from Github Actions UI
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    steps:
+     - name: first job
+       run: echo "sample"
  
   
