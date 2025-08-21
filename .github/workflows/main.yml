@@ -1,3 +1,4 @@
+name: GithubActions-Practice
 
 on:    
 # top-level-key that tells GA when to run this WF
