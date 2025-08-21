@@ -4,7 +4,8 @@ on:
 # top-level-key that tells GA when to run this WF
  push:
  # runs the WF when someone pushes the code to repo
-   branches: [ main,'feature/*' ]
+   branches: [ main ]
+  
    # Limits the the trigger to pushe on specific branch.Main or matches any branch starting with feature/(eg,feature/login)
    tags: [ 'v*.*.*' ]
    # Runs when someone pushes Git tag matching the pattern v1.0.0,v2.3.5(for versioned builds)
